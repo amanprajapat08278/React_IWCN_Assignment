@@ -4,15 +4,23 @@
   width: 100%;
   height: fit-content;
   padding: 10px;
+  position: sticky;
+  top: 0px;
+  
+  
 }
 
 #navbar>span {
+  cursor: pointer;
   margin-inline: 10px;
   font-size: 30px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-
+#navbar >i{
+  color: white;
+  height: 20px;
+}
 
 
 #inputBox {
@@ -24,11 +32,13 @@
 }
 
 #inputBox>textarea {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   background-color: rgb(248, 248, 201);
   border-radius: 5px;
   width: 500px;
-  height: 30px;
+  height: 20px;
+  padding: 8px;
+  
 }
 
 #inputBox>button {
@@ -67,8 +77,19 @@
 
 }
 
+.notesBox >i{
+  cursor: pointer;
+  
+}
+.notesBox >i:hover{
+   font-size: 20px;
+   transition: ease-in-out 0.3s;
+}
+
+
 .textArea {
   text-align: justify;
+  
 }
 
 .title {

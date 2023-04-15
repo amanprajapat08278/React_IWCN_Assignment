@@ -1,12 +1,9 @@
 const mysql = require("mysql2")
+const dotenv = require("dotenv")
 
+dotenv.config()
 
-const sqlModel = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "Lucky@82780",
-    database: "Notes"
-})
+const sqlModel = mysql.createConnection(process.env.DATABASE_URL)
 
 sqlModel.connect((err) => {
     if (err) { console.log(err.message) }
