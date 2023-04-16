@@ -60,7 +60,7 @@ function App() {
         alert("Data created succesfully")
         setTextareaContent("")
         setUpdate(false)
-      }).catch((err) => console.log(err.message))
+      }).catch((err) => alert(err.message))
 
   }
 
@@ -71,7 +71,7 @@ function App() {
     setUpdate(true)
     axios.get("http://localhost:5000/notes")
       .then((res) => { setAllNotes(res.data.data) })
-      .catch(err => console.log(err.message))
+      .catch((err) => alert(err.message))
   }, [update])
 
 
@@ -82,7 +82,7 @@ function App() {
     if (bool) {
       axios.delete(`http://localhost:5000/notes/${i}`)
         .then(() => { setUpdate(false) })
-        .catch(err => console.log(err.message))
+        .catch((err) => alert(err.message))
     }
   }
 
